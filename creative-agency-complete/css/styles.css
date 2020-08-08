@@ -1,0 +1,434 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****************************************
+* Base
+*****************************************/
+/* Typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #565656;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #27AE60;
+    text-decoration: none;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+}
+
+/* Page Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 88rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    height: 3rem;
+    border-radius: 3rem;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+}
+
+.button-large {
+    height: 3.5rem;
+    padding: 0 2rem;
+}
+
+.button-primary {
+    background: #27AE60;
+}
+
+.button-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+/*****************************************
+* Header
+*****************************************/
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.75rem;
+    padding: 0 1.5rem;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.125rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-weight: 700;
+}
+
+/* Nav Toggle */
+.nav-toggle {
+    position: relative;
+    width: 1.5rem;
+    height: 1rem;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.nav-toggle span:nth-of-type(1) {top: 0;}
+.nav-toggle span:nth-of-type(2) {top: 50%; margin-top: -1px;}
+.nav-toggle span:nth-of-type(3) {top: 100%; margin-top: -2px;}
+
+/* Site Nav */
+.site-nav {
+    position: fixed;
+    top: 3.75rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+}
+
+.nav-list {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-list-link {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.nav-list-cta {
+    margin-top: 1rem;
+}
+
+/* Nav Open */
+.site-header.nav-open {
+    position: fixed;
+    background: #333;
+}
+
+.site-header.nav-open .site-nav {
+    display: flex;
+}
+
+/*****************************************
+* Hero
+*****************************************/
+.hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 57rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;    
+}
+
+.hero-heading,
+.hero-para {
+    color: #fff;
+}
+
+.hero-button {
+    margin-top: 1rem;
+}
+
+/*****************************************
+* Homepage Section Styles
+*****************************************/
+.section-spacing {
+    margin: 4rem 0;
+}
+
+.section-intro {
+    margin-bottom: 2rem;
+}
+
+.section-intro-heading {
+    margin-bottom: .25rem;
+} 
+
+.section-intro-para {
+    margin: 0;
+}
+
+/*****************************************
+* Work Gallery
+*****************************************/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.gallery-item {
+    display: block;
+}
+
+.gallery-item img {
+    width: 100%;
+}
+
+/*****************************************
+* About
+*****************************************/
+.about-image {
+    margin-bottom: 2rem;
+}
+
+/*****************************************
+* Cta Banner
+*****************************************/
+.cta-banner {
+    background: #333;
+    padding: 2rem 0;
+}
+
+.cta-banner .section-intro {
+    margin-bottom: 1.5rem;
+}
+
+.cta-banner .section-intro-heading,
+.cta-banner .section-intro-para {
+    color: #fff;
+}
+
+/*****************************************
+* Footer
+*****************************************/
+.site-footer {
+    background: #222;
+    padding: 2rem 0;
+}
+
+.site-footer p {
+    font-size: .875rem;
+    margin: 0;
+    color: #999;
+}
+
+/*****************************************
+* Media Query Min Width 60rem (960px)
+*****************************************/
+@media screen and (min-width: 60rem) {
+
+    /*****************************************
+    * Base
+    *****************************************/
+    /* Typography */
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Page Wrapper */
+    .wrapper {
+        padding: 0 3rem;
+    }
+
+    /* Buttons */
+    .button-large {
+        padding: 0 3rem;
+    }
+
+    /*****************************************
+    * Header
+    *****************************************/
+    .site-header {
+        height: 7.5rem;
+        padding: 0 3rem;
+    }
+
+    .site-header.nav-open {
+        background: transparent;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Nav Toggle */
+    .nav-toggle {
+        display: none;
+    }
+
+    /* Site Nav */
+    .site-nav {
+        position: relative;
+        display: flex;
+        background: transparent;
+        top: initial;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-list-item {
+        margin-left: 2rem;
+    }
+
+    .nav-list-link {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-list-cta {
+        margin: 0;
+    }
+
+    /*****************************************
+    * Hero
+    *****************************************/
+    .hero-para {
+        font-size: 1.125rem;
+    }
+
+    /*****************************************
+    * Homepage Section Styles
+    *****************************************/
+    .section-spacing {
+        margin: 8rem 0;
+    }
+
+    .section-intro {
+        margin-bottom: 3.5rem;
+    }
+
+    .section-intro-heading {
+        margin-bottom: .5rem;
+    } 
+
+    .section-intro-para {
+        font-size: 1.125rem;
+    }
+
+    /*****************************************
+    * Work Gallery
+    *****************************************/
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /*****************************************
+    * About
+    *****************************************/
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .about-image {
+        margin: 0;
+    }
+
+    /*****************************************
+    * CTA Banner
+    *****************************************/
+    .cta-banner {
+        padding: 4rem 0;
+    }
+
+    .cta-banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cta-banner-content .section-intro {
+        margin: 0;
+    }
+
+    /*****************************************
+    * Site Footer
+    *****************************************/
+    .site-footer {
+        padding: 3rem 0;
+    }
+
+    .site-footer p {
+        font-size: 1rem;
+    }
+
+}
