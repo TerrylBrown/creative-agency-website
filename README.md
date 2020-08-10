@@ -1,2 +1,2 @@
 # creative-agency-website
-Html and CSS webiste template for a creative agency
+Website coded in HTML and CSS for Responsive Web Design tutorial here: https://www.youtube.com/watch?v=zqsyWP5cEyI&feature=youtu.be
